@@ -14,7 +14,7 @@ public class SnakeMovement : MonoBehaviour
     List<GameObject> bodyPart = new List<GameObject>();
     List<Vector3> StorePosition = new List<Vector3>();
 
-
+    
 
     void Start()
     {
@@ -22,12 +22,13 @@ public class SnakeMovement : MonoBehaviour
         {
             SneckBody();
         }
-        
+       
        
     }
     void Update()
     {
         //Move sneck Forward
+        
         transform.position += transform.forward * snakeSpeed * Time.deltaTime;
 
         // Move Sneck Right And left

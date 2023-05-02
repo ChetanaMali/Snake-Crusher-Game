@@ -4,18 +4,8 @@ using UnityEngine;
 
 public class DestroyEnemy : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
+    int score = 0;
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-    
     private void OnCollisionEnter(Collision collision)
     {
         if(collision.gameObject.layer == 7 && GameManager.instance.collectedItems < 5)
@@ -24,6 +14,8 @@ public class DestroyEnemy : MonoBehaviour
             Destroy(collision.gameObject);
             Debug.Log("Destroy");
             GameManager.instance.collectedItems++;
+
+            GameManager.instance.enemyDead.text = "Enemy: " + GameManager.instance.collectedItems.ToString();
             Debug.Log(GameManager.instance.collectedItems);
         }
         

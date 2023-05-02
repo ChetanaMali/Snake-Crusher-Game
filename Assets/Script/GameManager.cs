@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.ComponentModel;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class GameManager : MonoBehaviour
 {
@@ -15,9 +16,12 @@ public class GameManager : MonoBehaviour
     [Header("SnakeMovement Variable")]
     [HideInInspector] public int collectedItems = 0;
 
+    [Header("Drop Bone")]
+    public Text enemyDead;
+
     [Header ("Collecte Money")]
     public GameObject moneyPref;
-    
+    public Text scoreText;
 
     private static GameManager Instance;
     public static GameManager instance { get { return Instance; } }

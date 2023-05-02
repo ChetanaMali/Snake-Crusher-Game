@@ -1,20 +1,12 @@
 using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SocialPlatforms.Impl;
 
 public class CollectMoney : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    
+    int score;
     /*private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.layer == 3 || other.gameObject.layer == 8)
@@ -30,6 +22,8 @@ public class CollectMoney : MonoBehaviour
             Destroy(gameObject);
             //Destroy(GameManager.instance.moneyPref);
             Debug.Log("Destroy Money");
+            score++;
+            GameManager.instance.scoreText.text = "Score: " + score.ToString();
         }
     }
 }
