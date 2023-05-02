@@ -18,11 +18,12 @@ public class SnakeMovement : MonoBehaviour
 
     void Start()
     {
-        SneckBody();
-        SneckBody();
-        SneckBody();
-        SneckBody();
-        SneckBody();
+        for (int i = 0; i < 8; i++)
+        {
+            SneckBody();
+        }
+        
+       
     }
     void Update()
     {
@@ -30,7 +31,7 @@ public class SnakeMovement : MonoBehaviour
         transform.position += transform.forward * snakeSpeed * Time.deltaTime;
 
         // Move Sneck Right And left
-        float rotation = Input.GetAxis("Horizontal");
+        float rotation = Input.GetAxisRaw("Horizontal");
         transform.Rotate(Vector3.up * rotation  * rotatespeed * Time.deltaTime);
 
         // store Transform of bodypart
@@ -47,11 +48,21 @@ public class SnakeMovement : MonoBehaviour
 
             index++;
         }
-        
     }
     void SneckBody()
     {
         GameObject body = Instantiate(snakeBodyPref);
         bodyPart.Add(body);
-    }  
+    }
+    private void OnCollisionEnter(Collision collision)
+    {
+        if (collision.gameObject.layer == 7 )
+        {
+            
+            //Destroy(collision.gameObject);
+            //Debug.Log("Destroy");
+            
+        }
+
+    }
 }

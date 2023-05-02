@@ -3,17 +3,18 @@
 --- !u!78 &1
 TagManager:
   serializedVersion: 2
-  tags: []
+  tags:
+  - Snake
   layers:
   - Default
   - TransparentFX
   - Ignore Raycast
-  - 
+  - SnakeFace
   - Water
   - UI
   - cube
-  - 
-  - 
+  - Enemy
+  - SnakeBodyPart
   - 
   - 
   - 
