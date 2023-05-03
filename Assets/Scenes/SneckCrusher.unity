@@ -2059,8 +2059,8 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1171019046}
   m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
-  m_LocalPosition: {x: -16, y: 0.7, z: 5}
-  m_LocalScale: {x: 0.9, y: 0.9, z: 0.9}
+  m_LocalPosition: {x: -16, y: 0.5, z: 5}
+  m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 5
@@ -2096,7 +2096,7 @@ MonoBehaviour:
   snakeSpeed: 5
   rotatespeed: 300
   snakeBodyPref: {fileID: 1558538117233668161, guid: c235aa3660249744fa2da6308ef5b68b, type: 3}
-  gap: 25
+  gap: 40
   bodySpeed: 5
 --- !u!4 &1213693219 stripped
 Transform:
@@ -2817,6 +2817,7 @@ MonoBehaviour:
   enemyDead: {fileID: 471931462}
   moneyPref: {fileID: 7091335301534513886, guid: 81c22c68c0a5a2c42b170d70564fe0c4, type: 3}
   scoreText: {fileID: 244764078}
+  score: 0
 --- !u!4 &1553456153
 Transform:
   m_ObjectHideFlags: 0

@@ -36,7 +36,7 @@ public class SnakeMovement : MonoBehaviour
         transform.Rotate(Vector3.up * rotation  * rotatespeed * Time.deltaTime);
 
         // store Transform of bodypart
-        StorePosition.Insert(0, new Vector3(transform.position.x,1f, transform.position.z));
+        StorePosition.Insert(0, new Vector3(transform.position.x,0.4f, transform.position.z));
 
         // Move Body part
         int index = 0;
