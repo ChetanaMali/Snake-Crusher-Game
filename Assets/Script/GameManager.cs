@@ -22,6 +22,7 @@ public class GameManager : MonoBehaviour
     [Header ("Collecte Money")]
     public GameObject moneyPref;
     public Text scoreText;
+    public int score;
 
     private static GameManager Instance;
     public static GameManager instance { get { return Instance; } }

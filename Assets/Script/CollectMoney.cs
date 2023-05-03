@@ -6,7 +6,7 @@ using UnityEngine.SocialPlatforms.Impl;
 public class CollectMoney : MonoBehaviour
 {
     
-    int score;
+    
     /*private void OnTriggerEnter(Collider other)
     {
         if(other.gameObject.layer == 3 || other.gameObject.layer == 8)
@@ -22,8 +22,8 @@ public class CollectMoney : MonoBehaviour
             Destroy(gameObject);
             //Destroy(GameManager.instance.moneyPref);
             Debug.Log("Destroy Money");
-            score++;
-            GameManager.instance.scoreText.text = "Score: " + score.ToString();
+            GameManager.instance.score ++;
+            GameManager.instance.scoreText.text = "Score: " + GameManager.instance.score.ToString();
         }
     }
 }
