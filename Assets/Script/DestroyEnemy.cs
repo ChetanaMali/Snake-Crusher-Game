@@ -17,6 +17,7 @@ public class DestroyEnemy : MonoBehaviour
 
             GameManager.instance.enemyDead.text = "Enemy: " + GameManager.instance.collectedItems.ToString();
             Debug.Log(GameManager.instance.collectedItems);
+            AudioManeger.Instance.EnemyDeadSfx();
         }
         
     }

@@ -12,7 +12,8 @@ public class DropCollectedItem : MonoBehaviour
             GameManager.instance.collectedItems = 0;
             Debug.Log("items get 0");
             GameManager.instance.enemyDead.text = "Enemy: 0";
-            Instantiate(GameManager.instance.moneyPref, new Vector3(-14.5f, Random.Range( 0.05f, 0.45f), -6f), Quaternion.identity);
+            Instantiate(GameManager.instance.moneyPref, new Vector3(-14.5f, Random.Range( 0.15f, 0.45f), -6f), Quaternion.identity);
+            AudioManeger.Instance.BoneCollectdSfx();
             
         }
     }

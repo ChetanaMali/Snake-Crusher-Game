@@ -24,6 +24,7 @@ public class CollectMoney : MonoBehaviour
             Debug.Log("Destroy Money");
             GameManager.instance.score ++;
             GameManager.instance.scoreText.text = "Score: " + GameManager.instance.score.ToString();
+            AudioManeger.Instance.MoneyCollectedSfx();
         }
     }
 }
