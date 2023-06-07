@@ -8,7 +8,7 @@ public class SnakeMovement : MonoBehaviour
     [SerializeField] float snakeSpeed;
     [SerializeField] float rotatespeed;
     [SerializeField] GameObject snakeBodyPref;
-    [SerializeField] int gap = 5;
+    [SerializeField] int gap;
     [SerializeField] float bodySpeed;
 
     List<GameObject> bodyPart = new List<GameObject>();
@@ -36,7 +36,7 @@ public class SnakeMovement : MonoBehaviour
         transform.Rotate(Vector3.up * rotation  * rotatespeed * Time.deltaTime);
 
         // store Transform of bodypart
-        StorePosition.Insert(0, new Vector3(transform.position.x,0.4f, transform.position.z));
+        StorePosition.Insert(0, new Vector3(transform.position.x, transform.position.y, transform.position.z));
 
         // Move Body part
         int index = 0;
@@ -55,15 +55,5 @@ public class SnakeMovement : MonoBehaviour
         GameObject body = Instantiate(snakeBodyPref);
         bodyPart.Add(body);
     }
-    private void OnCollisionEnter(Collision collision)
-    {
-        if (collision.gameObject.layer == 7 )
-        {
-            
-            //Destroy(collision.gameObject);
-            //Debug.Log("Destroy");
-            
-        }
-
-    }
+   
 }
