@@ -16,7 +16,7 @@ public class PlayerNavemesh : MonoBehaviour
     public float sightRange;
     public float enemyMoveSpeed;
     */
-  
+  /*
     void Awake()
     {
         navMeshAgent = GetComponent<NavMeshAgent>();
@@ -43,5 +43,5 @@ public class PlayerNavemesh : MonoBehaviour
     {
         navMeshAgent.SetDestination(GameManager.instance.destination.transform.position * GameManager.instance.enemyMoveSpeed * Time.deltaTime);
     }
-     
+     */
 }
